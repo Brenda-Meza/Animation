@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Panda</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            overflow: hidden;
+        }
+        body{
+            background-image: url("nature.webp");
+            background-size: 1800px 800px;
+            background-color:white;
+        }
+        .walkButterfly{
+            background-image: url('butterfly.png');
+            width: 260px;
+            height: 100px;
+            margin-top:60px;
+            animation: butterfly 1.5s steps(12) infinite, flap 5s linear infinite;
+        }
+        @keyframes butterfly{
+            0%{
+                background-position: 0px;
+            }
+            100%{
+                background-position: 10050px;
+            }
+        }
+        @keyframes flap {
+            0%{
+                transform: translateX(-100px);
+            }
+            100%{
+                transform: translateX(1500px);
+            }
+        }
+        .walkButterfly2{
+            background-image: url('butterfly.png');
+            width: 135px;
+            height: 100px;
+            margin-top:-20px;
+            animation: butterfly2 1.5s steps(12) infinite, flap2 5s linear infinite;
+            animation-delay: 2s;
+            transform: translateX(-300px);
+        }
+        @keyframes butterfly2{
+            0%{
+                background-position: 0px;
+            }
+            100%{
+                background-position: 10050px;
+            }
+        }
+        @keyframes flap2{
+            0%{
+                transform: translateX(-300px);
+            }
+            100%{
+                transform: translateX(1550px);
+            }
+        }
+        .Runner{
+            background-image: url("runner.png");
+            width: 150px;
+            height: 150px;
+            margin-top:250px;
+            animation: Runner 2s steps(12) infinite, Run 5s linear infinite;
+            animation-delay: 5s;
+            transform: translateX(20000px);
+        }
+        @keyframes Runner{
+            0%{
+                background-position: 0px;
+            }
+            100%{
+                background-position: 12950px;
+            }
+        }
+        @keyframes Run{
+            0%{
+                transform: translateX(1550px);
+            }
+            100%{
+                transform: translateX(-500px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="walkButterfly"></div>
+    <div class="road"></div>
+    <div class="walkButterfly2"></div>
+    <div class="Runner"></div>
+    <div class="run"></div>
+
+</body>
+</html>
